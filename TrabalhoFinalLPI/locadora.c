@@ -3,8 +3,6 @@
 #include<string.h>
 #include"funcoes.h"
 
-//teste
-
 struct filmess{ //depois de usar a strtok passa pra string
   int codigo;
   char titulo[100];
