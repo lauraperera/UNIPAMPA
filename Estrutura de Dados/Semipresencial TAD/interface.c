@@ -2,7 +2,7 @@
 #include<string.h>
 #include<stdlib.h>
 #include"funcoes.h"
-
+ //kkk
 struct est{
 	int codigo;
 	char nome[15];
@@ -29,10 +29,10 @@ return 0;
 
 int ler(){
 	int i=0, cod, qnt;
-	
+
 	printf("Digite o código e a quantidade do produto que você deseja:\n");
 	scanf("%d %d", &cod, &qnt);
-	
+
 	while((estoque[i].codigo != cod) && (i<2)){
 		i++;
 	}
@@ -42,17 +42,17 @@ int ler(){
 			printf("Você pediu %d porém temos apenas %d. Quantidade indisponível no estoque.\n", qnt, estoque[i].quantidade);
 		}else{
 			estoque[i].quantidade = (estoque[i].quantidade - qnt);
-			printf("Sua compra foi efetuada com sucesso! Ainda possuímos %d produtos como este.\n", estoque[i].quantidade);		
+			printf("Sua compra foi efetuada com sucesso! Ainda possuímos %d produtos como este.\n", estoque[i].quantidade);
 		}
 	}else{
 		printf("O código que você inseriu está errado.\n");
 	}
-return 0;	
+return 0;
 }
 
 int imprimir(){
 	int i;
-	
+
 	for(i=0; i<2; i++){
 		printf("*********************************************\n");
 		printf("%d\n", estoque[i].codigo);
